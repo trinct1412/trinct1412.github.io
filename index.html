@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CV - Ocat</title>
+  <meta name="description" content="simple CV example created with HTML and CSS">
+  <meta name="author" content="Fly Nerd">
+  <link rel="icon" href="./img/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Raleway');
+
+        body {
+  margin: 0;
+  font-family: 'Calibri';
+  font-size: 16px;
+  line-height: 1.8em;
+}
+
+a {
+  color: #1C9C94;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+article {
+  padding:0 1em;
+}
+
+section{
+  margin: 1em;
+  padding: 1em;
+}
+
+.block-article{
+    padding: 0px 40px;
+}
+
+.adware p{
+    margin: 0;
+}
+
+.block-article p{
+    margin: 0;
+}
+
+.block-article .timeline{
+    text-decoration: underline;
+    font-size: larger;
+}
+
+
+header, main, footer {
+  margin: 0 auto;
+}
+
+header {
+  padding: 3em;
+  padding-bottom: 0;
+  text-align: center;
+  background-size: cover;
+  background-position: top;
+  background-image: url('img/banner.jpg');
+  color: white;
+}
+
+header section {
+  margin: 0 auto;
+  max-width: 640px;
+}
+
+header img {
+  border-radius: 50%;
+  max-width: 150px;
+}
+
+.header h3{
+    margin:0;
+}
+
+.timeline{
+    font-weight: bold;
+}
+
+.header-descrition ul{
+    margin-top:0;
+}
+
+h1 {
+  text-transform: uppercase;
+  margin: 1em 0;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+h3, h4 {
+  font-weight: bold;
+}
+
+main {
+  max-width: 1140px;
+}
+
+main section:not(:last-child) {
+    padding-bottom: 0;
+}
+
+.border-left{
+    border-left: 5px solid black;
+}
+
+.fab {
+  border: 1px solid white;
+  border-radius: 50%;
+  font-size: 1.5em;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  margin: 5px;
+  text-align: center;
+}
+
+a .fab {
+  color: white;
+}
+
+.course, .skills {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.course .title {
+  color: #509e98;
+  -ms-flex: 0 0 33.3%;
+  flex: 0 0 33.3%;
+  max-width: 33%;
+}
+
+.course .descrition {
+  -ms-flex: 0 0 66.6%;
+  flex: 0 0 66.6%;
+  max-width: 66.6%;
+}
+
+.course .header {
+    color: #509e98;
+    -ms-flex: 0 0 33.3%;
+    flex: 0 0 100%;
+    max-width: 33%;
+  }
+  
+  .course .header-descrition {
+    -ms-flex: 0 0 66.6%;
+    flex: 0 0 100%;
+    max-width: 66.6%;
+  }
+
+.course .descrition p {
+  padding-left: 1em;
+}
+
+.skills .column {
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.skills .column ul, ul.job-description {
+  list-style-type: none;
+}
+
+.skills .column ul > li:before {
+  content: "►";
+  padding-right: 0.5em;
+  color: #509e98;
+}
+
+.school, .job-title {
+  text-transform: capitalize;
+}
+
+.school span, .job-title span {
+  color: #889499;
+  text-decoration: underline;
+}
+
+ul.job-description li:before{
+  content: "✔";
+  padding-right: 0.5em;
+  color: #509e98;
+}
+
+.block-article .project{
+    font-weight: bold;
+    font-size: medium;
+}
+
+footer {
+ padding: 1em 1.5em;
+ color: black;
+ text-align: right;
+}
+
+@media only screen and (max-width: 768px) {
+  .course {
+    display: block;
+  }
+
+  .course .title, .course .descrition {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .skills {
+    display: block;
+  }
+
+  .skills .column {
+    max-width: 100%;
+  }
+
+  footer {
+    text-align: center;
+  }
+}
+    </style>
+</head>
+
+<body>
+  <header>
+    <!-- <div>
+      <img src="./img/avatar.jpg" />
+    </div> -->
+    <h1>NGUYEN CAO THIEN TRI</h1>
+    <section>
+      <p>My name is Tri. I have four and a half years of experiences as Backend Developer with strong knowledge in Python – Django.</p>
+      <a href="https://www.facebook.com/tri.nct1412" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://github.com/trinct1412" target="_blank">
+        <i class="fab fa-github-alt"></i>
+      </a>
+      <a href="https://www.tri.software" target="_blank">
+        <i class="fab fa-blogger-b"></i>
+      </a>
+    </section>
+  </header>
+  <main>
+    <section style="padding-top: 0;">
+      <h2>SKILL</h2>
+      <div class="border-left">
+        <article>
+        <div class='header'>
+          <h3>BASIC</h3>
+        </div>
+        <div class='header-descrition'>
+            <ul>
+                <li>Understand mutable and immutable.</li>
+                <li>Knowledge using function map(), filter(), reduce() and using lambda function.</li>
+                <li>Know how to use itertools to make code shortest.</li>
+                <li>Using generators, iterators to save the memory.</li>
+                <li>Familiarity with closures and decorator.</li>
+                <li>Knowledge about Websocket.</li>
+                <li>Understand memorize-cache.</li>
+                <li>Writing code by PEP8.</li>
+            </ul>
+        </div>
+      </article>
+      <article>
+        <div class='header'>
+          <h3>DATA STRUCTURES AND ALGORITHMS</h3>
+        </div>
+        <div class='header-descrition'>
+            <ul>
+                <li>Sorting algorithms: selection, interchange, insertion, binary insertion, bubble, shaker, counter...</li>
+                <li>Data structures: linker list, stack, queue, hash table, tree.</li>
+            </ul>
+        </div>
+      </article>
+      <article>
+        <div class='header'>
+          <h3>OOP</h3>
+        </div>
+        <div class='header-descrition'>
+            <ul>
+                <li>Understand decorator @classmethod and @staticmethod.</li>
+                <li>Knowledge operator overloading by Magic method: __add__, __sub__ ...</li>
+                <li>Familiarity decorator @property, @cache_property, @getter, @setter.</li>
+                <li>Have experience in overriding vs overloading.</li>
+                <li>Inheritance and multiple inheritance with MRO.</li>
+            </ul>
+        </div>
+      </article>
+      <article>
+        <div class='header'>
+          <h3>DATABASE</h3>
+        </div>
+        <div class='header-descrition'>
+            <ul>
+                <li>Understand and write query.</li>
+                <li>Have the knowledge to recognize and handle problems related to asynchrony.</li>
+                <li>Using index to speed up search.</li>
+                <li>Coordinate caching of non-obsolete data with redis to increase software performance...</li>
+            </ul>
+        </div>
+      </article>
+      <article>
+        <div class='header'>
+          <h3>WORKING</h3>
+        </div>
+        <div class='header-descrition'>
+            <ul>
+                <li>Familiarity with Agile, Scrum, CI/CD, Git.</li>
+                <li>Know how to use docker to build.</li>
+                <li>Know how to communicate to design software systems.</li>
+            </ul>
+        </div>
+      </article>
+      <article>
+        <div class='header'>
+          <h3>DJANGO</h3>
+        </div>
+        <div class='header-descrition'>
+            <ul>
+                <li>Object Relational Mappers, Restapi.</li>
+                <li>Architecture MVT(model – view – template).</li>
+                <li>Familiarity with design pattern: Factory Method, Observer Pattern, Singleton, Strategy,
+                    Decorator pattern.</li>
+                <li>Customize django framework, exception and response have the same structure.</li>
+                <li>Using select_related and prefetch_related resolve n+1 queries.</li>
+                <li>Knowledge migration and resolve error.</li>
+                <li>Have experience with django-oscar.</li>
+            </ul>
+        </div>
+      </article>
+      <article>
+        <div class='header'>
+          <h3>MACHINE LEARNING</h3>
+        </div>
+        <div class='header-descrition'>
+            <ul>
+                <li>Understand algorithm and using lib support for algorithm.</li>
+                <li>Similarity between two object: euclidean, manhattan, minkowski, cosine, Jaccard ...</li>
+                <li>Kmean, Knn.</li>
+                <li>Familarity Neighborhood-Based Collaborative Filtering, naive bayes Classifier.</li>
+                <li>Linear regression.</li>
+            </ul>
+        </div>
+      </article>
+      <div/>
+    </section>
+
+
+    <section>
+        <h2>EXPERIENCE</h2>
+        <div class="border-left">
+            <article>
+                <div class="block-article">
+                    <p class="timeline">JUL 2018 – JUL 2019</p>
+                    <span class="project">PHP DEVELOPER/ CHAT REALTIME, </span> <span class="company">YOUTHDEV HCMC</span>
+                    <p>Time: two months intership.</p>
+                    <p class="teamsize"></p>
+                    <p class="technical">Build web application – socket: html, css, bootstrap, jquery, ajax long poliing, php, mysql, nodejs.</p>
+                    <p class="description">Description: realtime chat using socket</p>
+                    <p>Link: <a href="https://github.com/trinct1412/real-time-chat">github</a></p>
+                    <br>
+                    <span class="project">DJANGO/ CHAT REALTIME - DOOPAGE SOCIAL NETWORK, </span> <span class="company">YOUTHDEV HCMC</span>
+                    <p class="job-position">Position: backend developer.</p>
+                    <p class="teamsize">Team size: 4</p>
+                    <p class="technical">Languages/ technologies used: python, django, restapi, worker, socket, docker.</p>
+                    <p class="description">Description: development lending or selling medical related equipment.</p>
+                </div>
+            </article>
+            <br>
+
+            <article>
+                <div class="block-article">
+                    <p class="timeline">DEC 2020 – JUL 2021</p>
+                    <span class="project">DJANGO-OSCAR ECOMMERCE JOA SHOP, </span> <span class="company">QST industries</span>
+                    <p class="job-position">Position: backend developer.</p>
+                    <p class="teamsize">Team size: 4</p>
+                    <p class="technical">Languages/ technologies used: python, restapi, redis, mysql, docker.</p>
+                    <p class="description">Description: development lending or selling medical related equipment.</p>
+                </div>
+            </article>
+            <br>
+
+            <article>
+                <div class="block-article">
+                    <p class="timeline">JUL 2021 – JUL 2022</p>
+                    <span class="project">Python - Clear cache tools, </span> <span class="company">Hybrid-technologies</span>
+                    <p class="job-position">Position: backend developer.</p>
+                    <p class="teamsize">Team size: 2</p>
+                    <p class="technical">Languages/ technologies used: python.</p>
+                    <p class="description">Description: using os to synchronize beetween two folder by copy and delete.
+                        Print list newfile, deletefile, updatefile. Write logging.</p>
+
+                    <br>
+                    <span class="project">Fast-api – DF joilmill, </span> <span class="company">Hybrid-technologies</span>
+                    <p class="job-position">Position: backend developer.</p>
+                    <p class="teamsize">Team size: 6</p>
+                    <p class="technical">Languages/ technologies used: fastapi.</p>
+                    <p class="description">Description: fried food chain manager.</p>
+                    
+                    <br>
+                    <span class="project">Fast-api – Naciel, </span> <span class="company">Hybrid-technologies</span>
+                    <p class="job-position">Position: backend developer.</p>
+                    <p class="teamsize">Team size: 6</p>
+                    <p class="technical">Languages/ technologies used: fastapi.</p>
+                    <p class="description">Description: handle collected data.</p>
+                </div>
+            </article>
+
+            <div/>
+      </section>
+
+      <section>
+        <h2>WORK EXPERIENCE</h2>
+        <div class="border-left">
+            <article>
+          <div class='header'>
+            <h3>YOUTHDEV HCMC</h3>
+          </div>
+          <div class='header-descrition'>
+              <ul>
+                  <li>Design and developing api high performance – with rest api.</li>
+                  <li>Using Factory design pattern to build types of messages in zalo like: Text, Image, Sticker,
+                    Gif, Location.</li>
+                  <li>Using ZaloOA service to send message zalo and save on db at the same time.</li>
+                  <li>Using Facebook, Personal FB service and worker to save on db from data return.</li>
+                  <li>Authenticate from FB using long-live token.</li>
+                  <li>Building system send mail statistician each Monday and template send mail.</li>
+                  <li>Building system scenario question on comment and auto reply according to the given
+                    scenario.</li>
+                  <li>Using Permission rest API to user authorization.</li>
+                  <li>Using docker to build project.</li>
+              </ul>
+          </div>
+        </article>
+        <article>
+          <div class='header'>
+            <h3>QTS HCMC</h3>
+          </div>
+          <div class='header-descrition'>
+              <ul>
+                  <li>Development and developing api high performance – with rest api for lending – selling.</li>
+                  <li>Development django-oscar according to MVT architure for manager system.</li>
+                  <li>User authorization will see different management functions modify with base django-
+                    oscar.</li>
+                  <li>Using redis to cache code recivied from phone when user register.</li>
+                  <li>The data statistician will change when user change date – observer pattern.</li>
+                  <li>Customize django framework – response – exception with same structure.</li>
+              </ul>
+          </div>
+        </article>
+        
+        <article>
+          <div class='header'>
+            <h3>HYBRID-TECHNOLOGIES HCMC</h3>
+          </div>
+          <div class='header-descrition'>
+            <ul class="roman">
+                <li>Clear cache cron:
+                <ul>
+                 <li>Understand using os package linux or windows to copy and delete file and
+                    proplems need resolve.</li>
+                    <li>Using glob, itertools package and generator, threading to improve performance.</li>
+                    <li>Write decorator logging for function.</li>
+                    <li>Write file note copy and delete.</li>
+                    <li>Send mail system and template.</li>
+                </ul>
+                </li>
+                <br>
+                <li>Joilmill:
+                    <ul>
+                     <li>Design and developing api high performance – with fast api.</li>
+                        <li>Writing docs design: api, screen, database, unit test.</li>
+                        <li>Implements orthers features on request.</li>
+                        <li>Knowledge sqlachemy, alembic.</li>
+                    </ul>
+                    </li>
+                <br>
+                <li>Naciel:
+                    <ul>
+                     <li>Design and developing api high performance – with fast api.</li>
+                        <li>Filter successful store and open store has a similar.</li>
+                        <li>Write decorator for check request right and validate data to response error.</li>
+                        <li>Write decorator for logging.</li>
+                        <li>Implements orthers features on request.</li>
+                        <li>Knowledge sqlachemy, alembic.</li>
+                    </ul>
+                    </li>
+               </ul>
+          </div>
+        </article>
+        <div/>
+      </section>
+
+
+      <section>
+        <h2>EDUCATION</h2>
+        <div class="border-left">
+            <article>
+                <div class="block-article">
+                    <p class="timeline">SEP 2015 – JAN 2020</p>
+                    <p class="company">INFORMATION SYSTEMS, UNIVERSITY OF INFORMATION TECHNOLOGY, VNU-
+                        HCM</p>
+                    <p class="project">Project: predict the number victim by confirmed-recovered covid-19.</p>
+                    <p class="teamsize"></p>
+                    <p class="technical">Languages/ Technologies used: python. svm, linear regression, lstm, arima.</p>
+                    <p class="description">Description: predict the number of people infected with covid within 7 days.</p>
+                    <p>Passed outline appraisal scientific research.</p>
+                </div>
+            </article>
+            <br>
+            <article>
+                <div class="block-article">
+                    <p class="timeline">JUL 2019 – SEP 2019</p>
+                    <p class="company">DATA SCIENCE, CODERSCHOOL, HCMC</p>
+                    <p class="project">Project: recommendation systems for SENDO ecommerce.</p>
+                    <p class="teamsize"></p>
+                    <p class="technical">Languages/ Technologies used: django, mysql, graphql.
+                        React native.
+                        matrix factorization, neighborhood-based collaborative filtering,
+                        population filtering.</p>
+                    <p class="description">Description: data processing and build a recommendation system based on product views.</p>
+                </div>
+            </article>
+            <div/>
+      </section>
+
+      <section>
+        <h2>AWARDS</h2>
+        <article>
+            <div class="adware">
+                <p>Participate in a lot of hackathons like Shift Saigon, Dappathon, Unesco,...</p>
+                <strong>1st prize at Twogap hackathon, HCMC.</strong>
+                <p>Build blockchain application for save result.</p>
+            </div>
+        </article>
+      </section>
+
+      <section>
+        <h2>CERTIFICATE</h2>
+        <article>
+            <div class="adware" style="display:flex">
+                <div style="width: 40%; max-width:40%">
+                    <p>Problem Solving (Basic) – Hackerank.</p>
+                    <p>Python (Basic) – Hackerank.</p>
+                    <p>Developing Mobility With .Net Xamarin – FPT Nanoversity.</p>
+                    <p>Data science track_hcm – CODERSCHOOL.</p>
+                </div>
+                <div style="width: 60%; max-width:60%">
+                    <img src="img/cerf.png" alt="" style="width: 100%;">
+                </div>
+            </div>
+        </article>
+      </section>
+
+  </main>
+  <footer>
+    <p>Updated at 2024 </p>
+  </footer>
+</body>
+</html>

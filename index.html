@@ -7,6 +7,7 @@
     <meta name="description" content="CV TriNguyen">
     <meta name="author" content="">
     <link rel="icon" href="./img/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <style>
@@ -278,14 +279,47 @@
             margin-right: 10px;
             width: 10px;
         }
+        
+        .active {
+            border-left: 5px solid #d32f2f;
+        }
+        
+        nav {
+            position: fixed;
+            right: 3%;
+            width: 14%;
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            top: calc(50vh - 80px);
+        }
+        
+        nav ul {
+            float: right;
+            width: calc(100% - 16px);
+            padding: 8px;
+            list-style: none;
+        }
+        
+        nav li {
+            float: left;
+            width: calc(100% - 16px);
+            font-size: 15px;
+            padding: 12px 8px;
+            border-left-color: #D81B60;
+            padding: 0px 10px;
+            font-size: 10px !important;
+        }
+        
+        nav li a {
+            color: black
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <!-- <div>
-      <img src="./img/avatar.jpg" />
-    </div> -->
         <h1>NGUYEN CAO THIEN TRI</h1>
         <section>
             <p>My name is Tri. I have four and a half years of experiences as Backend Developer with strong knowledge in Python – Django.</p>
@@ -304,7 +338,30 @@
         </section>
     </header>
     <main>
-        <section style="padding-top: 0;">
+        <nav id="nav" class="navbar navbar-template">
+            <div class="row col-xs-12 text-center">
+                <ul>
+                    <li class="active">
+                        <a href="#SKILL">SKILL</a>
+                    </li>
+                    <li>
+                        <a href="#EXPERIENCE">EXPERIENCE</a>
+                    </li>
+                    <li>
+                        <a href="#WORKEXPERIENCE">WORK EXPERIENCE</a>
+                    </li>
+
+                    <li>
+                        <a href="#EDUCATION">EDUCATION</a>
+                    </li>
+                    <li>
+                        <a href="#AWARDS">AWARDS - CERTIFICATE</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="scrollspy" id="SKILL" style="padding-top: 0;">
             <h2 onclick="hideSection(this);"><i class="fas fa-caret-up"></i>SKILL</h2>
             <div class="border-left container">
                 <article>
@@ -408,7 +465,7 @@
         </section>
 
 
-        <section>
+        <section class="scrollspy" id="EXPERIENCE">
             <h2 onclick="hideSection(this);"><i class="fas fa-caret-up"></i>EXPERIENCE</h2>
             <div class="border-left container">
                 <article>
@@ -478,7 +535,7 @@
                 <div/>
         </section>
 
-        <section>
+        <section class="scrollspy" id="WORKEXPERIENCE">
             <h2 onclick="hideSection(this);"><i class="fas fa-caret-up"></i>WORK EXPERIENCE</h2>
             <div class="border-left container">
                 <article>
@@ -558,8 +615,7 @@
                 <div/>
         </section>
 
-
-        <section>
+        <section class="scrollspy" id="EDUCATION">
             <h2 onclick="hideSection(this);"><i class="fas fa-caret-up"></i>EDUCATION</h2>
             <div class="border-left container">
                 <article>
@@ -593,7 +649,7 @@
                 <div/>
         </section>
 
-        <section>
+        <section class="scrollspy" id="AWARDS">
             <h2 onclick="hideSection(this);"><i class="fas fa-caret-up"></i>AWARDS</h2>
             <article>
                 <div class="border-left adware container">
@@ -653,6 +709,20 @@
             element.getElementsByTagName("i")[0].style.transform = "rotate(90deg)";
         }
     }
+
+    $(window).bind('scroll', function() {
+        var currentTop = $(window).scrollTop();
+        var elems = $('.scrollspy');
+        elems.each(function(index) {
+            var elemTop = $(this).offset().top - 70;
+            var elemBottom = elemTop + $(this).height();
+            if (currentTop >= elemTop && currentTop <= elemBottom) {
+                var id = $(this).attr('id');
+                var navElem = $('a[href="#' + id + '"]');
+                navElem.parent().addClass('active').siblings().removeClass('active');
+            }
+        })
+    });
 </script>
 
 </html>

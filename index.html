@@ -724,8 +724,10 @@
         })
     });
 
-    if (window.innerWidth < 850) {
+    if (window.innerWidth < 870) {
         nav.remove();
+    } else {
+        nav.style.top = document.getElementsByTagName('header')[0].scrollHeight + "px";
     }
 </script>
 
